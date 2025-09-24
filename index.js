@@ -8,11 +8,15 @@ const PORT = 5000;
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://pasupuletivasavirajesh143_db_user:VyFVhojqcDdGjgfw@cluster0.ya8og9f.mongodb.net/NewRegistration?retryWrites=true&w=majority&appName=Cluster0");
-const db = mongoose.connection;
-db.once('open', () => {
-    console.log("MongoDb connected successfully")
-});
+mongoose.connect(
+  "mongodb+srv://pasupuletivasavirajesh143_db_user:VyFVhojqcDdGjgfw@cluster0.ya8og9f.mongodb.net/NewRegistration?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }
+)
+.then(() => console.log("MongoDB connected successfully"))
+.catch(err => console.error("MongoDB connection error:", err));
 
 const FormSchema = new mongoose.Schema({
     name: String,
