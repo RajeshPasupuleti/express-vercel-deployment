@@ -7,7 +7,7 @@ const PORT = 5000;
 
 app.use(express.json());
 app.use(cors({
-  origin: "https://your-firebase-project.web.app" 
+  origin: "https://express-vercel-deployment-acyb.vercel.app/submit" 
 }));
 
 mongoose.connect("mongodb+srv://pasupuletivasavirajesh143_db_user:VyFVhojqcDdGjgfw@cluster0.ya8og9f.mongodb.net/NewRegistration?retryWrites=true&w=majority&appName=Cluster0");
