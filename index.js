@@ -6,7 +6,9 @@ const app = express();
 const PORT = 5000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://your-firebase-project.web.app" 
+}));
 
 mongoose.connect("mongodb+srv://pasupuletivasavirajesh143_db_user:<db_password>@cluster0.ya8og9f.mongodb.net/NewRegistration?retryWrites=true&w=majority&appName=Cluster0");
 const db = mongoose.connection;
