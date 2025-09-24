@@ -8,7 +8,7 @@ const PORT = 5000;
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://127.0.0.1:27017/Registration");
+mongoose.connect("mongodb+srv://pasupuletivasavirajesh143_db_user:<db_password>@cluster0.ya8og9f.mongodb.net/NewRegistration?retryWrites=true&w=majority&appName=Cluster0");
 const db = mongoose.connection;
 db.once('open', () => {
     console.log("MongoDb connected successfully")
