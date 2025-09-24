@@ -41,7 +41,7 @@ app.post('/submit', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Running backend')
+    res.send('Running backendd')
 });
 
 export default app;
